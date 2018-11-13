@@ -1,0 +1,145 @@
+/*Dejar menu resposive cuando este en min 960px*/
+* {
+  margin:0;
+  padding:0;
+  font-family: 'Open Sans',Verdana,Geneva,sans-serif;
+  font-size:16px;
+}
+
+#menu-responsive {
+  width:320px;
+  display:block;
+}
+
+ul > li {
+  list-style:none;
+  border-bottom:1px solid white;
+}
+
+li > a {
+  background-color:#e4701e;
+  color:#fff;
+  display:block;
+  text-decoration:none;
+  font-size:1em;
+  padding:7px 5px;
+  border-bottom: 1px solid;
+}
+
+.sub-list-1,
+.sub-list-2,
+.sub-list-3,
+.sub-list-4 {
+   border:0em #fff solid;
+   display:none;
+   margin-left:320px;
+   padding:7px 5px;
+   position:absolute;
+   margin-top:-45px;
+}
+
+.sub-list-1,
+.sub-list-2,
+.sub-list-3,
+.sub-list-4 > li {
+  width:320px;
+}
+
+
+.sub-list-1 li > a, 
+.sub-list-2 li > a,
+.sub-list-3 li > a,
+.sub-list-4 li > a {
+  background-color:#d85d18;
+} 
+
+.sub-list-1 li > a:hover,
+.sub-list-2 li > a:hover,
+.sub-list-3 li > a:hover,
+.sub-list-4 li > a:hover {
+  background-color:#BF311A;
+} 
+
+.list-1:hover,
+.list-2:hover,
+.list-3:hover,
+.list-4:hover {
+   background-color:#D25217;
+}
+
+.list-empty a:hover{
+  background-color:#D25217;
+}
+
+.list-1:hover + .sub-list-1,
+.list-1:hover + .sub-list-2,
+.list-1:hover + .sub-list-3,
+.list-1:hover + .sub-list-4 {
+    display:block;
+}
+
+
+#btn-menu {
+   background-color:#E0651C;
+   display:none;
+   height:50px;
+   margin-bottom:50px;
+}
+
+#btn-menu i {
+  color:#fff;
+  font-size:2.4em;
+  padding:3px;
+  margin-top:5px;
+}
+
+@media(min-width: 960px) {
+  body{
+    background-color:yellow;
+  }
+}
+
+@media(max-width: 960px) {
+  body {
+    background-color:#FBF8EF;
+  }
+
+  #btn-menu {
+    display:block;
+  }  
+
+  #menu-responsive {
+    display:block;
+    width:100%;
+    text-align:center;
+  }
+
+  .sub-list-1,
+  .sub-list-2,
+  .sub-list-3,
+  .sub-list-4  {
+    display:none;
+    position:relative;
+    margin:0;
+    padding:0;
+  }
+
+  .sub-list-1,
+  .sub-list-2,
+  .sub-list-3,
+  .sub-list-4  > li {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .list-1:hover + .sub-list-1,
+  .list-1:hover + .sub-list-2,
+  .list-1:hover + .sub-list-3,
+  .list-1:hover + .sub-list-4 {
+    display:none;
+  }
+}
+
+
+
+
